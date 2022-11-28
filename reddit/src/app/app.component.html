@@ -1,0 +1,22 @@
+<form >
+  <h3 >Add a Link</h3>
+  <div>
+    <label for="Text">Cose inutili:</label>
+    <input name="Text" #spamText> <!--Aggiunta una variabile di template-->
+  </div>
+  <div>
+    <label for="num">Tot:</label>
+    <input name="num" #num> <!--Aggiunta una variabile di template-->
+  </div>
+  <button (click)="addArticle(spamText, num)"> <!--Passiamo le variabili come parametro --> 
+  Submit link
+  </button>
+  <ul>
+    <li *ngFor="let name of articles">
+      <app-visual [name] = name></app-visual>
+    </li>
+  </ul>
+  
+  
+</form>
+
